@@ -3,7 +3,9 @@
  * _printf_Percent - print using _putchar
  * Return: result
 */
-int _printf_Percent(void)
+int _printf_Percent(va_list args)
 {
-return (_putchar(37));
+char p = va_arg(args, int);
+p = '%';
+return (_putchar(p));
 }
