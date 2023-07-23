@@ -9,7 +9,7 @@ int _printf_String(va_list ptr)
 char *srt = va_arg(ptr, char*);
 int a;
 if (srt == NULL)
-srt = "(nill)";
+srt = "(null)";
 a = write(1, srt, _strlen(srt));
 return (a);
 }
