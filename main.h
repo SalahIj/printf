@@ -11,7 +11,7 @@ int _printf_String(va_list ptr);
 int _printf(const char *format, ...);
 int _strlen(const char *s);
 int _printf_Character(va_list ptr);
-int _printf_Percent(va_list args);
+int _printf_Percent(void);
 
 /**
  * struct Option - struct name option
@@ -23,7 +23,7 @@ int _printf_Percent(va_list args);
 typedef struct Option
 {
     char car;
-    int (*f)(va_list);
+    int (*f)();
 } opt;
 
 #endif
