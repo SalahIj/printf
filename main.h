@@ -19,6 +19,7 @@ int _printf_Percent(void);
  * @f: fubnction pointer
  * Description: info
 */
+
 typedef struct Option
 {
     char car;
