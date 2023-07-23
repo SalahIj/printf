@@ -31,8 +31,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == specifier[j].car)
 				{
-					specifier[j].f(ptr);
-					counter++;
+					counter = counter + specifier[j].f(ptr);
 				}
 				j++;
 			}
