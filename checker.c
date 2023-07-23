@@ -9,8 +9,7 @@
 int checker(const char *format)
 {
 	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
-			{'%', _printf_Percent},	{'i', _printf_Integer_Decimal},
-			{'d', _printf_Integer_Decimal}};
+			{'%', _printf_Percent}};
 	int  nb_perce = 0, nb_specif = 0, k;
 	unsigned int j;
 
