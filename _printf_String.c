@@ -8,9 +8,8 @@ int _printf_String(va_list ptr)
 {
 char *srt = va_arg(ptr, char*);
 int a;
-if (*srt)
-{
+if (srt == NULL)
+srt = "(nill)";
 a = write(1, srt, _strlen(srt));
-}
 return (a);
 }
