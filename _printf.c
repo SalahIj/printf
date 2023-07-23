@@ -40,6 +40,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(ptr);
-	_putchar('\n');
 	return (counter);
 }
