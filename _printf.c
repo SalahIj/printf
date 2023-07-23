@@ -10,12 +10,13 @@ int _printf(const char *format, ...)
 {
 	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
 			{'%', _printf_Percent}};
-	int i = 0, counter = 0;
+	int i = 0, counter = 0, check;
 	unsigned int j;
 	va_list ptr;
 
 	va_start(ptr, format);
-	if (!format || (format[0] == '%' && !format[1]))
+	check = checker(format);
+	if (!format || (format[0] == '%' && !format[1]) || check == -1)
 		return (-1);
 
 	if (format[0] == '%' && format[1] == ' ' && !format[2])

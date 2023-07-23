@@ -1,7 +1,7 @@
 #include "main.h"
 
 int main() {
-    int num_chars = _printf("Hello, %s! I am %c. This is a percent sign: %%.\n", "John", 'A');
+    int num_chars = _printf("Hello, %! I am %c. This is a percent sign: %%.\n", "John", 'A');
     
     printf("Number of characters printed: %d\n", num_chars);
     _printf("Let's try to printf a simple sentence.\n");
