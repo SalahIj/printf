@@ -13,6 +13,12 @@ int _strlen(const char *s);
 int _printf_Character(va_list ptr);
 int _printf_Percent(void);
 
+/**
+ * struct Option - struct name option
+ * @car: pointer
+ * @f: fubnction pointer
+ * Description: info
+*/
 typedef struct Option
 {
     char car;
