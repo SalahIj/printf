@@ -21,15 +21,10 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-			if (format[i] != 'c' && format[i] != 's' && format[i] != '%')
-			{
-				counter += _putchar(format[i - 1]);
-				counter += _putchar(format[i]);
-			}
+			if (check_letters(format[i]) == 0)
+				counter += 2;
 			else
-			{
 				counter += specifier_Check(format[i], ptr);
-			}
 		}
 		else
 		{
