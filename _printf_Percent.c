@@ -7,5 +7,6 @@ int _printf_Percent(va_list args)
 {
 char p;
 p = va_arg(args, int);
-return (_putchar(37));
+p = '%'
+return (_putchar(p));
 }
