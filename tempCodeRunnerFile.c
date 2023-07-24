@@ -1,1 +1,0 @@
-int _printf_Integer(va_list args)
