@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			counter++;
 		}
+		if (i == _strlen(format) - 1)
+			_putchar('\n');
 		i++;
 	}
 	return (counter);
