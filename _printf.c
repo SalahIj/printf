@@ -23,7 +23,7 @@ unsigned int j;
 		if (format[i] == '%')
 		{
 			i++;
-			j = 3;
+			j = 0;
 			while (j < sizeof(specifier) / sizeof(specifier[0]))
 			{
 				if (format[i] == specifier[j].car)
