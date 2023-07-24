@@ -27,7 +27,7 @@ unsigned int j;
 			while (j < sizeof(specifier) / sizeof(specifier[0]))
 			{
 				if (format[i] == '\0')
-				return (-1)
+				return (-1);
 				if (format[i] == specifier[j].car)
 				{
 					counter = counter + specifier[j].f(ptr);
