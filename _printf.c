@@ -29,6 +29,7 @@ int _printf(const char *format, ...)
 				if (format[i] == specifier[j].car)
 				{
 					counter = counter + specifier[j].f(ptr);
+					i++;
 					break;
 				}
 				j++;
