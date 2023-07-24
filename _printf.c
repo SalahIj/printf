@@ -24,7 +24,10 @@ unsigned int j;
 		{
 			i++;
 			if (format[i] == '\0')
+			{
+				_putchar(format[i]);
 				return (-1);
+			}
 			j = 0;
 			while (j < 3)
 			{
