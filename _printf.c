@@ -26,6 +26,8 @@ unsigned int j;
 			j = 0;
 			while (j >= 0)
 			{
+				if (format[i] == '\0' && format[i - 2] != '%')
+				return (-1);
 				if (format[i] == specifier[j].car)
 				{
 					counter = counter + specifier[j].f(ptr);
