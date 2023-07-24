@@ -1,5 +1,5 @@
 #ifndef MAIN_H
-#define MAIN_H 
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -15,16 +15,16 @@ int _printf_Percent(void);
 int checker(const char *format);
 
 /**
- * struct Option - struct name option
- * @car: pointer
- * @f: fubnction pointer
- * Description: info
-*/
+ * struct Option - struct name option.
+ * @car: pointer.
+ * @f: function pointer.
+ * Description: info.
+ */
 
 typedef struct Option
 {
-    char car;
-    int (*f)();
+	char car;
+	int (*f)();
 } opt;
 
 #endif
