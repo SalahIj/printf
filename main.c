@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main() {
+int main(void) {
     int num_chars = _printf("Hello, %s! I am %c. This is a percent sign: %%.\n", "John", 'A');
     
     printf("Number of characters printed: %d\n", num_chars);
