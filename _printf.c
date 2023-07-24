@@ -9,15 +9,13 @@
 int _printf(const char *format, ...)
 {
 	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
-			{'%', _printf_Percent}};
-	int i = 0, counter = 0;
-unsigned int j;
+		{'%', _printf_Percent}};
+	int i = 0, counter = 0, j;
 	va_list ptr;
 
 	va_start(ptr, format);
 	if (!format || (format[0] == '%' && (!format[1] || format[1] == ' ')))
 		return (-1);
-
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -25,15 +23,21 @@ unsigned int j;
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-			j = 0;
-			while (j < 3)
+			if (format[i] != 'c' && format[i] != 's' && format[i] != '%')
 			{
-				if (format[i] == specifier[j].car)
+				counter += _putchar(format[i - 1]);
+				counter += _putchar(format[i]);
+			}
+			else
+			{
+				for (j = 0; j < 3; j++)
 				{
-					counter = counter + specifier[j].f(ptr);
-					break;
+					if (format[i] == specifier[j].car)
+					{
+						counter = counter + specifier[j].f(ptr);
+						break;
+					}
 				}
-				j++;
 			}
 		}
 		else
