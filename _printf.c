@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
 			{'%', _printf_Percent}};
-	int i = 0, counter = 0;
+	int i = 0, counter = 0, k = 0;
 	unsigned int j;
 	va_list ptr;
 
@@ -29,8 +29,12 @@ int _printf(const char *format, ...)
 				if (format[i] == specifier[j].car)
 				{
 					counter = counter + specifier[j].f(ptr);
+					k = 1;
 					break;
 				}
+				if (k == 0)
+					return (-1);
+
 				j++;
 			}
 		}
