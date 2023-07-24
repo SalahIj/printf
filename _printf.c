@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
 			{'%', _printf_Percent}};
-	int i = 0, counter = 0, k;
+	int i = 0, counter = 0;
 	unsigned int j;
 	va_list ptr;
 
@@ -18,11 +18,6 @@ int _printf(const char *format, ...)
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 
-	for (k = 0; format[k]; k++)
-	{
-		if (format[k] == '%' && !format[k + 1])
-			return (-1);
-	}
 	while (format[i])
 	{
 		if (format[i] == '%')
