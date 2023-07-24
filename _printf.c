@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			j = 0;
-			while (j < sizeof(specifier) / sizeof(specifier[0]))
+			while (j >= 0)
 			{
 				if (format[i] == specifier[j].car)
 				{
