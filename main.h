@@ -24,7 +24,7 @@ int end(const char *format);
 
 typedef struct Option
 {
-	char car;
+	char *car;
 	int (*f)();
 } opt;
 
