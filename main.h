@@ -12,8 +12,7 @@ int _printf(const char *format, ...);
 int _strlen(const char *s);
 int _printf_Character(va_list ptr);
 int _printf_Percent(void);
-int checker(const char *format);
-int end(const char *format);
+int specifier_Check(char cd, va_list ptr);
 
 /**
  * struct Option - struct name option.

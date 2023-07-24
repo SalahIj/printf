@@ -8,9 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	opt specifier[] = {{'c', _printf_Character}, {'s', _printf_String},
-		{'%', _printf_Percent}};
-	int i = 0, counter = 0, j;
+	int i = 0, counter = 0;
 	va_list ptr;
 
 	va_start(ptr, format);
@@ -30,14 +28,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				for (j = 0; j < 3; j++)
-				{
-					if (format[i] == specifier[j].car)
-					{
-						counter = counter + specifier[j].f(ptr);
-						break;
-					}
-				}
+				counter += specifier_Check(format[i], ptr);
 			}
 		}
 		else
