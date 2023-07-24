@@ -14,6 +14,7 @@ int _printf_Character(va_list ptr);
 int _printf_Percent(void);
 int specifier_Check(char cd, va_list ptr);
 int check_letters(char cd);
+int _printf_Integer(va_list args);
 
 /**
  * struct Option - struct name option.
