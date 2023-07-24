@@ -23,15 +23,15 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			j = 0;
-			while (j < sizeof(specifier) / sizeof(specifier[0]))
+			j = 3;
+			while (j > 0 )
 			{
 				if (format[i] == specifier[j].car)
 				{
 					counter = counter + specifier[j].f(ptr);
 					break;
 				}
-				j++;
+				j--;
 			}
 		}
 		else
