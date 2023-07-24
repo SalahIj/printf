@@ -26,7 +26,7 @@ unsigned int j;
 			if (format[i] == '\0')
 				return (-1);
 			j = 0;
-			while (j >= 0)
+			while (j < 3)
 			{
 				if (format[i] == specifier[j].car)
 				{
