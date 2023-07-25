@@ -29,7 +29,7 @@ return (ind + 1);
 int _printf_Integer_Decimal(va_list args)
 {
 int p = va_arg(args, int);
-int pt, p, num;
+int pt, num;
 num = p;
 if (num < 0)
 {
