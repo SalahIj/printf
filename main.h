@@ -18,6 +18,10 @@ int _printf_Digits(int n);
 int specifier_Check(char cd, va_list ptr);
 int check_letters(char cd);
 int _convert_Binary(va_list ptr);
+int _printf_Unsigned_D_I(va_list ptr);
+int _convert_HEXADICIMAL(va_list ptr);
+int _convert_Hexadicimal(va_list ptr);
+int _convert_Octal(va_list ptr);
 
 /**
  * struct Option - comment
