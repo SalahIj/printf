@@ -10,6 +10,11 @@ int *array, i, k;
 unsigned int p, m;
 p = va_arg(ptr, unsigned int);
 m = p;
+if (m == 0)
+{
+_putchar(0 + '0');
+return (1);
+}
 for (i = 0; p != 0; i++, p = p / 2)
 ;
 array = (int *)malloc(sizeof(int) * i);
