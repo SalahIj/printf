@@ -44,6 +44,12 @@ int _printf_Integer_Decimal(va_list args)
 		_putchar('-');
 		num = -num;
 	}
+	if (num == INT_MIN)
+	{
+		_putchar('2');
+		num %= 1000000000;
+		num = -num;
+	}
 	if (num == 0)
 	{
 		_putchar('0');
