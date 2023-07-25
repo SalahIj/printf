@@ -13,6 +13,11 @@ int _convert_HEXADICIMAL(va_list ptr)
 
 	p = va_arg(ptr, unsigned int);
 	m = p;
+	if (m == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	for (i = 0; p != 0; i++, p = p / 16)
 	;
 	array = (unsigned int *)malloc(sizeof(unsigned int) * i);
