@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
+#include <limits.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
@@ -24,6 +24,9 @@ int _printf_Unsigned_D_I(va_list ptr);
 int _convert_HEXADICIMAL(va_list ptr);
 int _convert_Hexadicimal(va_list ptr);
 int _convert_Octal(va_list ptr);
+long int _convert_HEXADICIMAL_ord(unsigned long int n);
+int _printf_convert_STRING(va_list ptr);
+long int _convert_Hexadicimal_ord(unsigned long int n);
 
 /**
  * struct Option - comment
