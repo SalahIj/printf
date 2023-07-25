@@ -13,15 +13,22 @@ int _printf(const char *format, ...);
 int _strlen(const char *s);
 int _printf_Character(va_list ptr);
 int _printf_Percent(void);
-int specifier_Check(char cd, va_list ptr);
-int check_letters(char cd);
 int _printf_Integer_Decimal(va_list args);
 int _printf_Digits(int n);
+int specifier_Check(char cd, va_list ptr);
+int check_letters(char cd);
+int _convert_Binary(va_list ptr);
 
+/**
+ * struct Option - comment
+ * @car: the first
+ * @f: the second
+ * Description: description
+*/
 typedef struct Option
 {
-    char car;
-    int (*f)();
+	char car;
+	int (*f)();
 } opt;
 
 #endif

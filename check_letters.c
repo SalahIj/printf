@@ -6,7 +6,7 @@
 */
 int check_letters(char cd)
 {
-char str[] = {'c', 's', '%', 'd', 'i'};
+char str[] = {'c', 's', '%', 'd', 'i', 'b'};
 unsigned int size, i, sum = 0;
 size = sizeof(str) / sizeof(str[0]);
 for (i = 0; i < size; i++)
