@@ -13,6 +13,13 @@ int _printf_convert_STRING(va_list ptr)
 	int ind = 0, i, j;
 
 	str = va_arg(ptr, char*);
+	if (str == NULL)
+	{
+		str = "(null)";
+		for (i = 0; i < 6; i++)
+			_putchar(str[i]);
+		return (6);
+	}
 	for (i = 0; str[i]; i++)
 	{
 		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
@@ -20,7 +27,7 @@ int _printf_convert_STRING(va_list ptr)
 			tab[ind] = '\\';
 			tab[ind + 1] = 'x';
 			tab[ind + 2] = str[i];
-			ind = ind + 3;
+			ind = ind + 4;
 		}
 		else
 		{
