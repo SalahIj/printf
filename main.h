@@ -16,7 +16,7 @@ int _printf_Percent(void);
 int specifier_Check(char cd, va_list ptr);
 int check_letters(char cd);
 int _printf_Integer_Decimal(va_list args);
-void _printf_Digits(int n);
+int _printf_Digits(int n);
 
 typedef struct Option
 {
