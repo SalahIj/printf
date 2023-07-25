@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define BAFFER_SIZE 1024
+
 int _putchar(const char c);
 int _printf_String(va_list ptr);
 int _printf(const char *format, ...);
