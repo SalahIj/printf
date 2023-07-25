@@ -36,7 +36,7 @@ int _printf_Digits(int n)
 int _printf_Integer_Decimal(va_list args)
 {
 	int p = va_arg(args, int);
-	int pt, num;
+	int pt, num, k = 0;
 
 	num = p;
 	if (num < 0)
@@ -49,6 +49,7 @@ int _printf_Integer_Decimal(va_list args)
 		_putchar('2');
 		num %= 1000000000;
 		num = -num;
+		k = 1;
 	}
 	if (num == 0)
 	{
@@ -58,6 +59,8 @@ int _printf_Integer_Decimal(va_list args)
 	pt = _printf_Digits(num);
 	if (p > 0)
 		return (pt);
+	else if (k == 1)
+		return (pt + 2);
 	else
 		return (pt + 1);
 }
