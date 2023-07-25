@@ -28,8 +28,9 @@ return (ind + 1);
 */
 int _printf_Integer_Decimal(va_list args)
 {
-int num = va_arg(args, int);
-int pt;
+int p = va_arg(args, int);
+int pt, p;
+num = p;
 if (num < 0)
 {
 _putchar('-');
@@ -41,5 +42,8 @@ _putchar('0');
 return (1);
 }
 pt = _printf_Digits(num);
+if (p > 0)
 return (pt);
+else
+return (pt + 1);
 }
