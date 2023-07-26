@@ -18,12 +18,15 @@ return (c);
 }
 /**
  * _printf_rot13 - string by 13
- * @str: string
+ * @ptr: string
  * Return: retun string by 13
 */
-int _printf_rot13(va_list *str)
+int _printf_rot13(va_list *ptr)
 {
 int i = 0;
+int count = 0;
+
+char *str = va_arg(ptr, char*);
 if (str == NULL)
 {
 str = "nill";
@@ -36,6 +39,7 @@ return (1);
 for (i = 0; str[i] != '\0'; i++)
 {
 _putchar(rot13_char(str[i]));
+count++;
 }
-return (1);
+return (count + 1);
 }
