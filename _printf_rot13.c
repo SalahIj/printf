@@ -41,5 +41,5 @@ for (i = 0; str[i] != '\0'; i++)
 _putchar(rot13_char(str[i]));
 count++;
 }
-return (count + 1);
+return (count);
 }
