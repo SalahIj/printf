@@ -21,7 +21,7 @@ return (c);
  * @str: string
  * Return: retun string by 13
 */
-void _printf_rot13(va_list *str)
+int _printf_rot13(va_list *str)
 {
 int i = 0;
 if (str == NULL)
@@ -31,11 +31,11 @@ for (i = 0 ; str[i] != '\0' ; i++)
 {
 _putchar((str[i]));
 }
-return;
+return (1);
 }
 for (i = 0; str[i] != '\0'; i++)
 {
 _putchar(rot13_char(str[i]));
 }
-return;
+return (1);
 }
