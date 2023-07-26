@@ -30,6 +30,5 @@ for (j = len - 1 ; j >= 0 ; j--)
 {
 _putchar(str[j]);
 }
-_putchar('\n');
-return (len + 1);
+return (len);
 }
