@@ -29,16 +29,13 @@ int _printf_convert_STRING(va_list ptr);
 long int _convert_Hexadicimal_ord(unsigned long int n);
 int _printf_Pointer(va_list ptr);
 int _printf_rot13(va_list ptr);
-<<<<<<< HEAD
 int _flag_plus(char letter, va_list ptr);
 int _flag_specifier_search(char letter, char flag);
 int _flag_specifier_indice(char flag, char letter, va_list ptr);
 int _flag_space(char lettre, va_list ptr);
 int _flag_dieze(char lettre, va_list ptr);
-
-=======
 int _printf_rev(va_list ptr);
->>>>>>> 2160c9e4bc0cb34c75bc47692a29efc67aabc133
+
 
 /**
  * struct Option - comment
