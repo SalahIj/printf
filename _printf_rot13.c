@@ -21,7 +21,7 @@ return (c);
  * @ptr: string
  * Return: retun string by 13
 */
-int _printf_rot13(va_list *ptr)
+int _printf_rot13(va_list ptr)
 {
 int i = 0;
 int count = 0;
