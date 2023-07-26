@@ -28,6 +28,7 @@ long int _convert_HEXADICIMAL_ord(unsigned long int n);
 int _printf_convert_STRING(va_list ptr);
 long int _convert_Hexadicimal_ord(unsigned long int n);
 int _printf_Pointer(va_list ptr);
+void _printf_rot13(va_list *str);
 
 /**
  * struct Option - comment
